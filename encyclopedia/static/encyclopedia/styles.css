@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+/* newEntry - Header form*/
+#newEntryHeaderForm
+{
+    margin: 10px;
+    min-width:200px;
+    height:100px;
+    vertical-align: center;
+}
+
+/* newEntry - main form*/
+#newEntryMainForm
+{
+    margin: 10px;
+    min-width:200px;
+    vertical-align: center;
+}
+
+
+/* Buttons */
+.button1
+{
+    display:inline-block;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.button1:hover
+{
+    color:#000000;
+    background-color:#FFFFFF;
+}
