@@ -38,10 +38,12 @@ def get_entry(title):
     except FileNotFoundError:
         return None
 
-# Added
+# Added for markdown addition. Uses the markdown.convert function to format the text correctly.
 def entry(request, entry):
+    # Added external variables first before the logic as usual.
 	markD = Markdown()
 	entryPage = util.get_entry(entry)
+    # Standard if-else logic. Renders either a corgi error page or uses markdown.convert funtion. 
 	if entryPage is None:
 		return render(request, "encyclopedia/nonExistingEntry.html", {
 			"entryTitle": entry

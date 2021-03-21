@@ -5,13 +5,14 @@
 {% endblock %}
 
 {% block body %}
-	
+	<!-- Title of the page changes if using the 'search' function with an if statement -->
     {% if search %}
         <h2>Searching for {{ value }}</h2>
     {% else %}
         <h1>All pages</h1>
     {% endif %}
-    
+    <!-- Remember to use endif etc to finish logic -->
+    <!-- for statement to list each entry (changes with search function on what is returned)-->
     <ul>
         {% for entry in entries %}
             <a href = "/wiki/{{ entry }}"><li>{{ entry }}</li></a>

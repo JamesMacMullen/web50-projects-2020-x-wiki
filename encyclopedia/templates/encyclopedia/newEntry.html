@@ -5,8 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    
-    <!--Form-->
+    <!-- New entry created if its not preexisting otherwise alert message and edit option-->
 {% if existing == True %}
     <div class="alert alert-danger" role="alert">
         This entry exists. If you want to view or edit it, 
@@ -16,7 +15,7 @@
         Or change the entry down here. That's on you!
     </div>
 {% endif %}
-
+<!--Actual form reference; csrf_token required for security, form.as_p is referred to in Django documentation for text field-->
 </br>
 <div class="form-group">
 	<form action="{% url 'newEntry' %}" method="post">

@@ -1,30 +1,34 @@
 {% load static %}
 
 <!DOCTYPE html>
-
+<!--Layout page N.B. that it NEEDS to load all static files (above) to use them -->
 <html lang="en">
     <head>
+        <!-- Title block, Bootstrap and styles.css added-->
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></link>
         <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet"></link>
     </head>
+    <!-- left side menu that is added to each page hence is repetitive and therefore needs to be here -->
     <body>
         <div class="row">
             <div class="sidebar col-lg-2 col-md-3">
+                <!--Header of sidebar-->
                 <h2>Wiki</h2>
+                <!--Form with search input N.B. in future dont forget to add the action in form otherwise it will not work! -->>
                 <form action="{% url 'search' %}" method="get">
                     <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
                 </form>
                 <div>
-                <!-- Works -->
+                <!-- Works: shows the homepage when clicked -->
                     <a href="{% url 'index' %}">Home</a>
                 </div>
                 <div>
-                <!-- Works -->
+                <!-- Works: new entry page -->
                     <a href="{% url 'newEntry' %}">Create New Page</a>
                 </div>
                 <div>
-                <!-- Works -->
+                <!-- Works: select random page like googles I'm feeling luck button -->
                     <a href="{% url 'random' %}">Random Page</a>
                 </div>
                 {% block nav %}
@@ -33,7 +37,7 @@
             </div>
             <div class="main col-lg-10 col-md-9">
                 {% block body %}
-                
+                <!--Body is taken care of by other pages as mainly unique so blank-->
                 {% endblock %}
             </div>
         </div>

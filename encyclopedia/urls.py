@@ -11,6 +11,4 @@ urlpatterns = [
 	path("wiki/<str:entry>/edit", views.edit, name="edit"),
 	path("random", views.random, name="random"),
 	path("search", views.search, name="search")
-	# Testing something below that is not needed
-	#path("<str:title>", views.entry, name="entry")
 ]
